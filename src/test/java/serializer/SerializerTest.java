@@ -24,13 +24,19 @@ class SerializerTest {
         xmlSerializer.serialize(register, "users.xml");
     }
 
-    /*@Test
+    @Test
     void serializeCsv() {
         Register register = preparation();
 
         CsvSerializer csvSerializer = new CsvSerializer();
-        csvSerializer.serialize(register, "users.csv");
-    }*/
+        csvSerializer.serialize( "users.csv", register);
+    }
+
+    @Test
+    public void convert () {
+        Converter converter = new Converter();
+        converter.convertFromJsonToCsv("users.json");
+    }
 
     private Register preparation() {
         User ivan = new User();

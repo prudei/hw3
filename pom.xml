@@ -8,6 +8,18 @@
     <artifactId>hw3</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <modules>
         <module>user-api</module>
     </modules>
@@ -36,6 +48,14 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.geekbrains.hw</groupId>
+            <artifactId>user-api</artifactId>
+            <version>RELEASE</version>
+            <scope>system</scope>
+            <systemPath>/Users/pavelprudej/.m2/repository/ru/geekbrains/hw/user-api/1.0-SNAPSHOT/user-api-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
 
 
